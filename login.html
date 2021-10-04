@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style3.css">
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyA8u7XwehSdtb3M5m6DUHlG2zaO3pD5CrI",
+      authDomain: "anarafood-318506.firebaseapp.com",
+      databaseURL: "https://anarafood-318506-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "anarafood-318506",
+      storageBucket: "anarafood-318506.appspot.com",
+      messagingSenderId: "576631374074",
+      appId: "1:576631374074:web:5d96b24422a09ccca40943",
+      measurementId: "G-GT8PS2XDNT"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth = firebase.auth();
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form>
+      <label>Email</label><br>
+      <input type="text" id="email" placeholder="email"><br>
+      <label>Password</label><br>
+      <input type="password" id="Password" placeholder="password"><br>
+      <button type="button" class="btn btn-success" onclick="login();">Log in</button>
+      <p> don't have an account yet?
+        <a href="signup.html">Sign Up in here</a>
+      </p>
+    </form>
+  </div>
+  
+  <script src="js/function.js"></script>
+</body>
+</html>
